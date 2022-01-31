@@ -14,7 +14,7 @@ const items = createReducer([], {
       (contact) => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (index !== -1) {
-      toast(`${name} is already in contacts`);
+      toast.warn(`${name} is already in contacts`);
       return state;
     }
     const newState = [...state, payload];
@@ -25,5 +25,4 @@ const items = createReducer([], {
     return newState;
   },
 });
-
 export default combineReducers({ items, filter });

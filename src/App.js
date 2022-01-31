@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
 import Filter from "./components/Filter/Filter";
@@ -19,6 +20,18 @@ function App() {
       ) : (
         <Text>Nothing</Text>
       )}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </AppDiv>
   );
 }
